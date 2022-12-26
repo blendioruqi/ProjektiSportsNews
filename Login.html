@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+</head>
+<body bgcolor="darkslategrey">
+    <form id="login-form">
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username"><br>
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password"><br><br>
+        <input type="submit" value="Submit">
+      </form> 
+      
+      <style>
+        #login-form {
+          width: 300px;
+          margin-top: 300px;
+          margin-left: 820px;
+          border: 1px solid #ccc;
+          padding: 20px;
+          background-color:white;
+        }
+      
+        label {
+          display: block;
+          margin-bottom: 10px;
+        }
+      
+        input[type="text"], input[type="password"] {
+          width: 100%;
+          padding: 12px 20px;
+          margin-bottom: 20px;
+          box-sizing: border-box;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+        }
+      
+        input[type="submit"] {
+          width: 100%;
+          background-color: #4CAF50;
+          color: white;
+          padding: 14px 20px;
+          margin: 8px 0;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+        }
+      
+        input[type="submit"]:hover {
+          background-color: #45a049;
+        }
+      </style>
+      
+      <script>
+        document.getElementById('login-form').addEventListener('submit', function(event) {
+          event.preventDefault();
+      
+          var username = document.getElementById('username').value;
+          var password = document.getElementById('password').value;
+      
+          if (username === 'blendi' && password === 'oruqi') {
+            alert('Login është bërë me sukses!');
+          } else {
+            alert('Username ose Passwordi është gabim');
+          }
+        });
+      </script>
+
+</body>
+
+</html>
